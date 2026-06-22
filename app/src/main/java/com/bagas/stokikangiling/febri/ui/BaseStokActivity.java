@@ -23,6 +23,7 @@ public abstract class BaseStokActivity extends AppCompatActivity {
     protected MaterialAutoCompleteTextView dropdownProduk;
     protected TextView tvStokSaatIni;
     protected List<IkanGiling> daftarProduk = new ArrayList<>();
+    private IkanGiling produkTerpilih;
 
     protected void siapkanDropdownProduk() {
         dropdownProduk = findViewById(R.id.dropdownProduk);
@@ -40,27 +41,35 @@ public abstract class BaseStokActivity extends AppCompatActivity {
                 labelProduk
         );
         dropdownProduk.setAdapter(adapter);
+        dropdownProduk.setThreshold(0);
+        dropdownProduk.setOnClickListener(v -> tampilkanPilihanProduk());
+        dropdownProduk.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus) tampilkanPilihanProduk();
+        });
 
         dropdownProduk.setOnItemClickListener((parent, view, position, id) -> {
-            IkanGiling produk = daftarProduk.get(position);
-            tvStokSaatIni.setText("Stok saat ini: " + FormatUtils.kg(produk.getStokKg()));
+            produkTerpilih = daftarProduk.get(position);
+            tvStokSaatIni.setText("Stok saat ini: " + FormatUtils.kg(produkTerpilih.getStokKg()));
         });
 
         if (daftarProduk.isEmpty()) {
             dropdownProduk.setHint("Belum ada produk");
+            dropdownProduk.setEnabled(false);
             tvStokSaatIni.setText("Tambahkan produk terlebih dahulu.");
         }
     }
 
     protected IkanGiling produkTerpilih() {
-        int posisi = -1;
-        String pilihan = dropdownProduk.getText() == null ? "" : dropdownProduk.getText().toString();
-        for (int i = 0; i < daftarProduk.size(); i++) {
-            if (daftarProduk.get(i).getRingkasan().equals(pilihan)) {
-                posisi = i;
-                break;
-            }
+        String pilihan = dropdownProduk.getText() == null ? "" : dropdownProduk.getText().toString().trim();
+        if (produkTerpilih != null && produkTerpilih.getRingkasan().equals(pilihan)) {
+            return produkTerpilih;
         }
-        return posisi >= 0 ? daftarProduk.get(posisi) : null;
+        return null;
+    }
+
+    private void tampilkanPilihanProduk() {
+        if (!daftarProduk.isEmpty()) {
+            dropdownProduk.showDropDown();
+        }
     }
 }

@@ -60,7 +60,7 @@ public class StokService {
         if (produk == null) {
             return OperationResult.error("Produk tidak ditemukan.");
         }
-        if (jumlahKg <= 0) {
+        if (!Double.isFinite(jumlahKg) || jumlahKg <= 0) {
             return OperationResult.error("Jumlah stok masuk harus lebih dari 0.");
         }
 
@@ -75,7 +75,7 @@ public class StokService {
         if (produk == null) {
             return OperationResult.error("Produk tidak ditemukan.");
         }
-        if (jumlahKg <= 0) {
+        if (!Double.isFinite(jumlahKg) || jumlahKg <= 0) {
             return OperationResult.error("Jumlah stok keluar harus lebih dari 0.");
         }
         if (jumlahKg > produk.getStokKg()) {

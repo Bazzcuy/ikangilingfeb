@@ -106,7 +106,7 @@ public class ProdukFormActivity extends AppCompatActivity {
     private void muatDataEdit() {
         produkLama = repository.findProdukById(produkId);
         if (produkLama == null) {
-            Snackbar.make(btnSimpan, "Produk tidak ditemukan.", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(tvJudulForm, "Produk tidak ditemukan.", Snackbar.LENGTH_LONG).show();
             finish();
             return;
         }

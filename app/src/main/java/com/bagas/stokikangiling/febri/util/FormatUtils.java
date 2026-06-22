@@ -28,6 +28,10 @@ public final class FormatUtils {
             throw new NumberFormatException("Input kosong");
         }
         String normalized = text.trim().replace(",", ".");
-        return Double.parseDouble(normalized);
+        double value = Double.parseDouble(normalized);
+        if (!Double.isFinite(value)) {
+            throw new NumberFormatException("Input tidak valid");
+        }
+        return value;
     }
 }
