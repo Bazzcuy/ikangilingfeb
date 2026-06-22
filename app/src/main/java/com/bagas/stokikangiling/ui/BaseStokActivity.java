@@ -1,14 +1,14 @@
-package com.bagas.stokikangiling.febri.ui;
+package com.bagas.stokikangiling.ui;
 
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bagas.stokikangiling.febri.R;
-import com.bagas.stokikangiling.febri.data.ProdukRepository;
-import com.bagas.stokikangiling.febri.model.IkanGiling;
-import com.bagas.stokikangiling.febri.util.FormatUtils;
+import com.bagas.stokikangiling.R;
+import com.bagas.stokikangiling.data.ProdukRepository;
+import com.bagas.stokikangiling.model.IkanGiling;
+import com.bagas.stokikangiling.util.FormatUtils;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 
 import java.util.ArrayList;

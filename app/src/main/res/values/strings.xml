@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Stok Ikan - Febri</string>
+    <string name="app_name">Stok Ikan Giling</string>
     <string name="judul_dashboard">Sistem Pencatatan Stok Ikan Giling</string>
-    <string name="subjudul_dashboard">Versi Febri: aplikasi mobile Java sederhana untuk pencatatan produk bergambar, stok masuk, stok keluar, dan laporan persediaan lokal.</string>
+    <string name="subjudul_dashboard">Aplikasi mobile Java untuk pencatatan produk bergambar, stok masuk, stok keluar, laporan persediaan lokal, serta export dan import catatan.</string>
 </resources>

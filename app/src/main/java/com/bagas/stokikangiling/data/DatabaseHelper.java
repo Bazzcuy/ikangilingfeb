@@ -1,4 +1,4 @@
-package com.bagas.stokikangiling.febri.data;
+package com.bagas.stokikangiling.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

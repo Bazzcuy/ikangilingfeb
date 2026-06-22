@@ -1,4 +1,4 @@
-package com.bagas.stokikangiling.febri.ui;
+package com.bagas.stokikangiling.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,14 +11,14 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bagas.stokikangiling.febri.R;
-import com.bagas.stokikangiling.febri.data.ProdukRepository;
-import com.bagas.stokikangiling.febri.data.SQLiteProdukRepository;
-import com.bagas.stokikangiling.febri.model.IkanGiling;
-import com.bagas.stokikangiling.febri.model.OperationResult;
-import com.bagas.stokikangiling.febri.service.StokService;
-import com.bagas.stokikangiling.febri.util.FormatUtils;
-import com.bagas.stokikangiling.febri.util.ImageUtils;
+import com.bagas.stokikangiling.R;
+import com.bagas.stokikangiling.data.ProdukRepository;
+import com.bagas.stokikangiling.data.SQLiteProdukRepository;
+import com.bagas.stokikangiling.model.IkanGiling;
+import com.bagas.stokikangiling.model.OperationResult;
+import com.bagas.stokikangiling.service.StokService;
+import com.bagas.stokikangiling.util.FormatUtils;
+import com.bagas.stokikangiling.util.ImageUtils;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;

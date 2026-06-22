@@ -1,4 +1,4 @@
-package com.bagas.stokikangiling.febri.model;
+package com.bagas.stokikangiling.model;
 
 public class OperationResult {
     private final boolean success;

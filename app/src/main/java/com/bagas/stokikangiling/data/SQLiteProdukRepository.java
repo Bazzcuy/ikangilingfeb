@@ -1,13 +1,13 @@
-package com.bagas.stokikangiling.febri.data;
+package com.bagas.stokikangiling.data;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.bagas.stokikangiling.febri.model.DashboardStats;
-import com.bagas.stokikangiling.febri.model.IkanGiling;
-import com.bagas.stokikangiling.febri.model.StockLog;
+import com.bagas.stokikangiling.model.DashboardStats;
+import com.bagas.stokikangiling.model.IkanGiling;
+import com.bagas.stokikangiling.model.StockLog;
 
 import java.util.ArrayList;
 import java.util.List;

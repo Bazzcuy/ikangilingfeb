@@ -1,9 +1,9 @@
-package com.bagas.stokikangiling.febri.util;
+package com.bagas.stokikangiling.util;
 
 import android.content.Context;
 import android.net.Uri;
 import android.widget.ImageView;
-import com.bagas.stokikangiling.febri.R;
+import com.bagas.stokikangiling.R;
 
 public final class ImageUtils {
     private ImageUtils() {}

@@ -1,4 +1,4 @@
-package com.bagas.stokikangiling.febri.ui.adapter;
+package com.bagas.stokikangiling.ui.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bagas.stokikangiling.febri.R;
-import com.bagas.stokikangiling.febri.model.StockLog;
-import com.bagas.stokikangiling.febri.service.StokService;
-import com.bagas.stokikangiling.febri.util.FormatUtils;
+import com.bagas.stokikangiling.R;
+import com.bagas.stokikangiling.model.StockLog;
+import com.bagas.stokikangiling.service.StokService;
+import com.bagas.stokikangiling.util.FormatUtils;
 
 import java.util.ArrayList;
 import java.util.List;

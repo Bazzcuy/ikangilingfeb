@@ -36,7 +36,40 @@
                 android:padding="18dp">
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_section_chip" android:text="Laporan Ringkas" android:textColor="@color/primary_dark" android:textSize="12sp" android:textStyle="bold" />
                 <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:autoSizeMaxTextSize="23sp" android:autoSizeMinTextSize="17sp" android:autoSizeStepGranularity="1sp" android:autoSizeTextType="uniform" android:maxLines="2" android:text="Ringkasan Stok dan Riwayat" android:textColor="@color/text_primary" android:textStyle="bold" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Data laporan disusun dari produk, stok aktif, dan histori transaksi stok yang tersimpan secara lokal." android:textColor="@color/text_secondary" android:textSize="14sp" android:lineSpacingExtra="2dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Data laporan disusun dari produk, stok aktif, histori transaksi, dan catatan pendukung yang tersimpan secara lokal." android:textColor="@color/text_secondary" android:textSize="14sp" android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_soft_panel"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Aksi Data Laporan" android:textColor="@color/text_primary" android:textSize="17sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Export data ke CSV agar bisa dibuka di Excel, atau import catatan pemeriksaan dari file TXT/CSV." android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingExtra="2dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnExportCsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Export CSV untuk Excel"
+                    android:textSize="14sp"
+                    app:icon="@android:drawable/stat_sys_download"
+                    app:iconGravity="textStart" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnImportCatatan"
+                    style="@style/Widget.StokIkanGiling.Button.Outlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Import Catatan Laporan"
+                    android:textSize="14sp"
+                    app:icon="@android:drawable/ic_menu_upload"
+                    app:iconGravity="textStart" />
             </LinearLayout>
 
             <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" app:cardElevation="3dp">
@@ -66,6 +99,21 @@
                     <TextView android:id="@+id/tvLaporanStokRendah" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:autoSizeMaxTextSize="30sp" android:autoSizeMinTextSize="18sp" android:autoSizeStepGranularity="1sp" android:autoSizeTextType="uniform" android:maxLines="1" android:text="0" android:textColor="@color/warning" android:textStyle="bold" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/layoutCatatanImport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_empty_state"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:visibility="gone">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Catatan Import" android:textColor="@color/text_primary" android:textSize="17sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvCatatanImportInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Sumber file" android:textColor="@color/text_muted" android:textSize="12sp" />
+                <TextView android:id="@+id/tvCatatanImportIsi" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingExtra="3dp" />
+            </LinearLayout>
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="Riwayat Perubahan Stok" android:textColor="@color/text_primary" android:textSize="19sp" android:textStyle="bold" />
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Setiap stok masuk dan stok keluar dicatat sebagai histori aktivitas lokal." android:textColor="@color/text_secondary" android:textSize="13sp" />

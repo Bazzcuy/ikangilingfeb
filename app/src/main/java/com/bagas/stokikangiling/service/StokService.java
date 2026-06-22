@@ -1,8 +1,8 @@
-package com.bagas.stokikangiling.febri.service;
+package com.bagas.stokikangiling.service;
 
-import com.bagas.stokikangiling.febri.data.ProdukRepository;
-import com.bagas.stokikangiling.febri.model.IkanGiling;
-import com.bagas.stokikangiling.febri.model.OperationResult;
+import com.bagas.stokikangiling.data.ProdukRepository;
+import com.bagas.stokikangiling.model.IkanGiling;
+import com.bagas.stokikangiling.model.OperationResult;
 
 public class StokService {
     public static final String TRANSAKSI_MASUK = "MASUK";

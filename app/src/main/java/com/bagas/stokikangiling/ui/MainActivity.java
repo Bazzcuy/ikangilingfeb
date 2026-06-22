@@ -1,4 +1,4 @@
-package com.bagas.stokikangiling.febri.ui;
+package com.bagas.stokikangiling.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,11 +6,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bagas.stokikangiling.febri.R;
-import com.bagas.stokikangiling.febri.data.ProdukRepository;
-import com.bagas.stokikangiling.febri.data.SQLiteProdukRepository;
-import com.bagas.stokikangiling.febri.model.DashboardStats;
-import com.bagas.stokikangiling.febri.util.FormatUtils;
+import com.bagas.stokikangiling.R;
+import com.bagas.stokikangiling.data.ProdukRepository;
+import com.bagas.stokikangiling.data.SQLiteProdukRepository;
+import com.bagas.stokikangiling.model.DashboardStats;
+import com.bagas.stokikangiling.util.FormatUtils;
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {

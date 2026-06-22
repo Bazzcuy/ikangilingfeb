@@ -1,8 +1,8 @@
-package com.bagas.stokikangiling.febri.data;
+package com.bagas.stokikangiling.data;
 
-import com.bagas.stokikangiling.febri.model.DashboardStats;
-import com.bagas.stokikangiling.febri.model.IkanGiling;
-import com.bagas.stokikangiling.febri.model.StockLog;
+import com.bagas.stokikangiling.model.DashboardStats;
+import com.bagas.stokikangiling.model.IkanGiling;
+import com.bagas.stokikangiling.model.StockLog;
 
 import java.util.List;
 

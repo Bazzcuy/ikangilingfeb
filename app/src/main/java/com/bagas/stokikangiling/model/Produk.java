@@ -1,4 +1,4 @@
-package com.bagas.stokikangiling.febri.model;
+package com.bagas.stokikangiling.model;
 
 /**
  * Class induk untuk menunjukkan konsep OOP:

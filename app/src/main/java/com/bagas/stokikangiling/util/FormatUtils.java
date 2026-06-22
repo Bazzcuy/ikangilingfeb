@@ -1,4 +1,4 @@
-package com.bagas.stokikangiling.febri.util;
+package com.bagas.stokikangiling.util;
 
 import java.text.NumberFormat;
 import java.util.Locale;

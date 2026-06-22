@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.bagas.stokikangiling.febri'
+    namespace 'com.bagas.stokikangiling'
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.bagas.stokikangiling.febri"
+        applicationId "com.bagas.stokikangiling"
         minSdk 23
         targetSdk 35
         versionCode 1

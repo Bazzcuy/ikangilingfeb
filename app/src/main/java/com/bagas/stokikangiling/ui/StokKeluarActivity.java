@@ -1,19 +1,19 @@
-package com.bagas.stokikangiling.febri.ui;
+package com.bagas.stokikangiling.ui;
 
 import android.os.Bundle;
 
-import com.bagas.stokikangiling.febri.R;
-import com.bagas.stokikangiling.febri.data.SQLiteProdukRepository;
-import com.bagas.stokikangiling.febri.model.IkanGiling;
-import com.bagas.stokikangiling.febri.model.OperationResult;
-import com.bagas.stokikangiling.febri.service.StokService;
-import com.bagas.stokikangiling.febri.util.FormatUtils;
+import com.bagas.stokikangiling.R;
+import com.bagas.stokikangiling.data.SQLiteProdukRepository;
+import com.bagas.stokikangiling.model.IkanGiling;
+import com.bagas.stokikangiling.model.OperationResult;
+import com.bagas.stokikangiling.service.StokService;
+import com.bagas.stokikangiling.util.FormatUtils;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
-public class StokMasukActivity extends BaseStokActivity {
+public class StokKeluarActivity extends BaseStokActivity {
     private StokService stokService;
     private TextInputEditText edtJumlah, edtCatatan;
     private MaterialButton btnSimpan;
@@ -21,23 +21,23 @@ public class StokMasukActivity extends BaseStokActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stok_masuk);
+        setContentView(R.layout.activity_stok_keluar);
 
         repository = new SQLiteProdukRepository(this);
         stokService = new StokService(repository);
 
-        MaterialToolbar toolbar = findViewById(R.id.toolbarStokMasuk);
+        MaterialToolbar toolbar = findViewById(R.id.toolbarStokKeluar);
         toolbar.setNavigationOnClickListener(v -> finish());
 
         edtJumlah = findViewById(R.id.edtJumlahStok);
         edtCatatan = findViewById(R.id.edtCatatanStok);
-        btnSimpan = findViewById(R.id.btnSimpanStokMasuk);
+        btnSimpan = findViewById(R.id.btnSimpanStokKeluar);
 
         siapkanDropdownProduk();
-        btnSimpan.setOnClickListener(v -> simpanStokMasuk());
+        btnSimpan.setOnClickListener(v -> simpanStokKeluar());
     }
 
-    private void simpanStokMasuk() {
+    private void simpanStokKeluar() {
         IkanGiling produk = produkTerpilih();
         if (produk == null) {
             Snackbar.make(btnSimpan, "Pilih produk terlebih dahulu.", Snackbar.LENGTH_LONG).show();
@@ -52,7 +52,7 @@ public class StokMasukActivity extends BaseStokActivity {
             return;
         }
 
-        OperationResult result = stokService.tambahStok(produk.getId(), jumlah, teks(edtCatatan));
+        OperationResult result = stokService.kurangiStok(produk.getId(), jumlah, teks(edtCatatan));
         Snackbar.make(btnSimpan, result.getMessage(), Snackbar.LENGTH_LONG).show();
         if (result.isSuccess()) {
             btnSimpan.postDelayed(this::finish, 650);

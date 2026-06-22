@@ -2,7 +2,7 @@
 
 Aplikasi Android native berbasis **Java** untuk tugas Pemrograman Berorientasi Objek.
 
-**Application ID:** `com.bagas.stokikangiling.febri`  
+**Application ID:** `com.bagas.stokikangiling`  
 **Penyimpanan:** SQLite lokal di perangkat, tanpa akun dan tanpa koneksi internet.
 
 ## Fitur utama
@@ -12,7 +12,7 @@ Aplikasi Android native berbasis **Java** untuk tugas Pemrograman Berorientasi O
 - Pencarian produk.
 - Catat stok masuk.
 - Catat stok keluar dengan validasi stok tidak boleh minus.
-- Laporan ringkas dan riwayat stok terbaru.
+- Laporan ringkas, riwayat stok terbaru, export CSV untuk Excel, dan import catatan laporan.
 - Penyimpanan lokal memakai SQLite.
 - Sepuluh data contoh ikan Indonesia beserta foto yang tersedia offline.
 
