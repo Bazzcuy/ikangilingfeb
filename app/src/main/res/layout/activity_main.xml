@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:title="Dashboard Stok"
+        android:titleTextColor="@android:color/white"
+        app:navigationIconTint="@android:color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/page_margin"
+            android:paddingTop="@dimen/page_margin"
+            android:paddingEnd="@dimen/page_margin"
+            android:paddingBottom="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_header_gradient"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_section_chip"
+                    android:text="Java OOP • SQLite Lokal"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="18sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:maxLines="3"
+                    android:text="@string/judul_dashboard"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/subjudul_dashboard"
+                    android:textColor="#E8FFFC"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Ringkasan Persediaan"
+                android:textColor="@color/text_primary"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Ringkasan dibuat otomatis dari data produk dan perubahan stok yang tersimpan di perangkat."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="18dp">
+                    <TextView android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/bg_stat_icon_primary" android:gravity="center" android:text="P" android:textColor="@color/primary_dark" android:textSize="18sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total Produk" android:textColor="@color/text_secondary" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvTotalProduk" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:autoSizeMaxTextSize="30sp" android:autoSizeMinTextSize="18sp" android:autoSizeStepGranularity="1sp" android:autoSizeTextType="uniform" android:maxLines="1" android:text="0" android:textColor="@color/text_primary" android:textStyle="bold" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Jenis ikan giling tercatat" android:textColor="@color/text_muted" android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="18dp">
+                    <TextView android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/bg_stat_icon_success" android:gravity="center" android:text="Kg" android:textColor="@color/success" android:textSize="13sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total Stok" android:textColor="@color/text_secondary" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvTotalStok" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:autoSizeMaxTextSize="28sp" android:autoSizeMinTextSize="16sp" android:autoSizeStepGranularity="1sp" android:autoSizeTextType="uniform" android:maxLines="1" android:text="0 kg" android:textColor="@color/text_primary" android:textStyle="bold" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Persediaan aktif di local storage" android:textColor="@color/text_muted" android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="18dp">
+                    <TextView android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/bg_stat_icon_warning" android:gravity="center" android:text="!" android:textColor="@color/warning" android:textSize="20sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Stok Rendah" android:textColor="@color/text_secondary" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvStokRendah" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:autoSizeMaxTextSize="30sp" android:autoSizeMinTextSize="18sp" android:autoSizeStepGranularity="1sp" android:autoSizeTextType="uniform" android:maxLines="1" android:text="0" android:textColor="@color/warning" android:textStyle="bold" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Produk dengan stok ≤ 5 kg" android:textColor="@color/text_muted" android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="18dp">
+                    <TextView android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/bg_stat_icon_primary" android:gravity="center" android:text="Rp" android:textColor="@color/primary_dark" android:textSize="13sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nilai Persediaan" android:textColor="@color/text_secondary" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/tvNilaiPersediaan" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:autoSizeMaxTextSize="26sp" android:autoSizeMinTextSize="14sp" android:autoSizeStepGranularity="1sp" android:autoSizeTextType="uniform" android:maxLines="2" android:text="Rp0" android:textColor="@color/text_primary" android:textStyle="bold" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Estimasi stok × harga per kg" android:textColor="@color/text_muted" android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Menu Utama"
+                android:textColor="@color/text_primary"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Tombol dibuat lebar agar tetap nyaman di layar kecil maupun layar besar."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Kelola Produk dan Gambar"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTambahProduk"
+                style="@style/Widget.StokIkanGiling.Button.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tambah Produk Baru"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStokMasuk"
+                style="@style/Widget.StokIkanGiling.Button.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Catat Stok Masuk"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStokKeluar"
+                style="@style/Widget.StokIkanGiling.Button.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Catat Stok Keluar"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLaporan"
+                style="@style/Widget.StokIkanGiling.Button.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Lihat Laporan dan Riwayat"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

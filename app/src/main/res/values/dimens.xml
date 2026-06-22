@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="page_margin">16dp</dimen>
+    <dimen name="page_margin_large">20dp</dimen>
+    <dimen name="card_padding">18dp</dimen>
+    <dimen name="card_radius">22dp</dimen>
+    <dimen name="product_image_size">88dp</dimen>
+    <dimen name="form_image_height">210dp</dimen>
+</resources>
